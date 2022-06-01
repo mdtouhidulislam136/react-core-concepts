@@ -10,12 +10,22 @@ const styles = {
 }
 
 function App() {
-
+const lists = ['robin', 'mahmudul', 'green', 'pink ', 'blue', 'yellow', 'black', 'white', 'aqua' , 'red'];
   return (
+
+    
     <div className="App">
-      <Counter name="robin"></Counter>
-      <Counter name="robin"></Counter>
-      <Counter name="robin"></Counter>
+      {
+        lists.map(list => <li>Name: {list}</li>)
+
+      }
+
+      {
+        lists.map(list => <Counter name={list}></Counter>)
+      }
+      <Counter name={lists[1]}></Counter>
+      <Counter name={lists[0]}></Counter>
+      <Counter name={lists[2]}></Counter>
       <Counter name="robin"></Counter>
      
     </div>
